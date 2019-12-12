@@ -6,6 +6,8 @@ if __name__ == "__main__":
     if end == 2:
         print("{:d} argument:".format(end - 1))
         print("{:d}: {:s}".format(i, sys.argv[i]))
+    if end == 1:
+        print("{:d} arguments.".format(end - 1))
     else:
         print("{:d} arguments:".format(end - 1))
         for i in range(i, end):
