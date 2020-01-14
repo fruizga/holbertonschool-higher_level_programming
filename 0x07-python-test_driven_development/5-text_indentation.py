@@ -2,8 +2,10 @@
 """prints text with 2 newlines after
 character - . ? :
 """
+
+
 def text_indentation(text):
-    if isinstance(text, str) == False or text is None or len(text) < 0:
+    if isinstance(text, str) is False or text is None or len(text) < 0:
         raise TypeError("text must be a string")
     Temp = text
     if Temp is not None:
