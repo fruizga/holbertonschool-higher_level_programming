@@ -21,3 +21,12 @@ class Square:
         return self.__size
 
     size = property(get_size, set_size)
+
+    def my_print(self):
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print('#', end='')
+                print()
