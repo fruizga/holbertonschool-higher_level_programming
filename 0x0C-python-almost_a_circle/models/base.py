@@ -1,20 +1,20 @@
 #!/usr/bib/python3
 """
-Bla bla
+Bla bla jaja
 """
 
 
 class Base:
     """
-    Ble
+    class Base definition
     """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """
         Bleeeee
         """
-        
+
         if id is not None:
             self.id = id
         else:
