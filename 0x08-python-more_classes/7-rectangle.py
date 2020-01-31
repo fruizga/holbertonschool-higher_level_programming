@@ -4,10 +4,13 @@ class Rectangle:
     __height = None
     area = 0
     perimeter = 0
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
+        self.number_of_instances += 1
 
     @property
     def width(self):
@@ -46,11 +49,12 @@ class Rectangle:
 
     def __str__(self):
         string = ''
+        self.print_symbol = str(self.print_symbol)
         if self.__height == 0 or self.width == 0:
             return ''
         for i in range(self.__height):
             for j in range(self.__width):
-                string = string + '#'
+                string = string + self.print_symbol
             if i < (self.__height - 1):
                 string = string + '\n'
         return string
@@ -61,3 +65,4 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        self.number_of_instances -= 1
