@@ -25,11 +25,11 @@ class Rectangle(Base):
     
     @property
     def height(self):
-        return self.height
+        return self.__height
     
     @height.setter
     def height(value):
-        self.height = value
+        self.__height = value
     
     @property
     def x(self):
