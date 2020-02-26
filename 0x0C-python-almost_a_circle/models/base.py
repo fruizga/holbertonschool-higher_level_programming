@@ -1,13 +1,9 @@
-#!/usr/bib/python3
-"""
-Bla bla jaja
-"""
+#!/usr/bin/python3
+"""base class"""
 
 
 class Base:
-    """
-    class Base definition
-    """
+    """class Base definition"""
     __nb_objects = 0
 
     def __init__(self, id=None):
