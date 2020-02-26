@@ -2,7 +2,7 @@
 """Rectangle
 """
 
-Base = __import__('base').Base
+from models.base import Base
 """Inherits from base
 """
 
@@ -12,8 +12,8 @@ class Rectangle(Base):
         super().__init__(id)
         self.__width = width
         self.__height = height
-        self.x = x
-        self.y = y
+        self.__x = x
+        self.__y = y
                 
     @property
     def width(self):
@@ -33,18 +33,18 @@ class Rectangle(Base):
     
     @property
     def x(self):
-        return self.x
+        return self.__x
     
     @x.setter
     def x(value):
-        self.x = value
+        self.__x = value
     
     @property
     def y(self):
-        return self.y
+        return self.__y
     
     @y.setter
     def y(value):
-        self.y = value
+        self.__y = value
 
         
