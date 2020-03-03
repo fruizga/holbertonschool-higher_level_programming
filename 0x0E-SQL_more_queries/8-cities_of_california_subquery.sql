@@ -6,4 +6,4 @@ USE hbtn_0d_usa;
         WHERE state_id =        
           (SELECT state_id
            FROM states
-           WHERE name = 'California') ORDER BY cities.id;
+           WHERE name = 'California') ORDER BY cities.id ASC;
