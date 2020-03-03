@@ -1,1 +1,5 @@
 *main.py
+.project
+__pycache__
+.pydevproject
+.idea
