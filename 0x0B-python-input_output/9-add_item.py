@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 from sys import argv
-"""adds all arguments to a Python list
+""" adds all arguments to a Python list
 """
 
 
