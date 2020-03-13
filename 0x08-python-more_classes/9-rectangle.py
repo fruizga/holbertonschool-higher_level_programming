@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Class Rctangle
+"""
+
+
 class Rectangle:
     __width = None
     __height = None
