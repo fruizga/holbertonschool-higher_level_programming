@@ -12,11 +12,11 @@ if __name__ == '__main__':
                 JOIN states ON cities.state_id = states.id\
                 WHERE states.name = %s\
                 ORDER BY cities.id ASC", (argv[4], ))
-    states = cur.fetchall()
+    states = curs.fetchall()
     all_cities = []
     for records in states:
         if records[4] == argv[4]:
             all_cities.append(records[2])
-    print(', '.join(list_cities))
-    cur.close()
+    print(', '.join(all_cities))
+    curs.close()
     a_db.close()
