@@ -1,16 +1,22 @@
 #!/usr/bin/python3
-"""lists all cities of s state, using the database hbtn_0e_4_usa"""
-if __name__ == '__main__':
-    import MySQLdb
-    import sys
+import MySQLdb
+from sys import argv
 
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    curs = db.cursor()
-    curs.execute(
-        """SELECT name FROM cities WHERE state_id = (SELECT id FROM states \
-            WHERE name = %s) ORDER BY id;""", (sys.argv[4],))
-    rows = curs.fetchall()
-    print(", ".join([row[0] for row in rows]))
-    curs.close()
-    db.close()
+
+if __name__ == '__main__':
+
+    a_db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                           passwd=argv[2], db=argv[3])
+    curs = a_db.cursor()
+    curs.execute("SELECT * FROM cities\
+                JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s\
+                ORDER BY cities.id ASC", (argv[4], ))
+    states = cur.fetchall()
+    all_cities = []
+    for records in states:
+        if records[4] == argv[4]:
+            all_cities.append(records[2])
+    print(', '.join(list_cities))
+    cur.close()
+    a_db.close()
